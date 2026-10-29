@@ -1,0 +1,16 @@
+{
+  "name": "ruchira-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive black & neon portfolio — React (Vite) frontend + Node.js/Express backend",
+  "scripts": {
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n api,web -c green,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "test": "npm test --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
